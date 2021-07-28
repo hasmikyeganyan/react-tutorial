@@ -1,12 +1,17 @@
 
 import './App.css';
+import ExpenseItem from './components/Expenseitem';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hi There</h1>
+      <h3>Hi There</h3>
+      <ExpenseItem />
+      
+     
     </div> 
   );
 }
+
 
 export default App;

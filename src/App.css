@@ -1,7 +1,6 @@
 body {
-  padding: 0;
+  padding: 20px;
   margin: 0;
   font-family: sans-serif;
-  background-color: #282c34;
-  color: beige;
+  background-color: white;
 }
