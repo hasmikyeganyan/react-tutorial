@@ -4,9 +4,11 @@ import ExpenseItem from './components/Expenseitem';
 
 function App() {
   return (
-    <div className="App">
-      <h3>Hi There</h3>
+    <div className="App container">
+      <h3>Expense App</h3>
+      <br />
       <ExpenseItem />
+    
       
      
     </div> 
