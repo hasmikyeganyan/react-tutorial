@@ -1,10 +1,13 @@
-function ExpenseItemTitle(){
+function ExpenseItemTitle(props){
 return(
     <div className='col-6 '>
               <div className='row'>
-            <div className='col-2 text-secondary'>Today</div>
-            <div className='col-10'>
-            <b>Car Insurance </b>
+            <div className='col-4 text-secondary'>
+            <i class='far fa-clock px-2' ></i>{' '}
+            {props.date.toDateString()}
+            </div>
+            <div className='col-8'>
+            <b>{props.title} </b>
                </div>
                </div>
                </div>
