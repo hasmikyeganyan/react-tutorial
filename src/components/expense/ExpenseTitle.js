@@ -1,5 +1,5 @@
-function ExpenseItemTitle(props){
-return(
+const ExpenseTitle=(props)=>(
+
     <div className='col-6 '>
               <div className='row'>
             <div className='col-4 text-secondary'>
@@ -11,6 +11,6 @@ return(
                </div>
                </div>
                </div>
-)
-}
-export default ExpenseItemTitle;
+
+);
+export default ExpenseTitle;
