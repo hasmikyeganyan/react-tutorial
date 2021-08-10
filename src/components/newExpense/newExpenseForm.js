@@ -9,10 +9,21 @@ const NewExpenseForm =()=>{
             const changeTitle=(event) =>setTitle(event.target.value);
             const changeDate =(event)=>setDate(event.target.value);
             const changePrice =(event)=>setPrice(event.target.value);
-            const onSubmit=()=> console.log(title,date,price);
+            const onSubmit=(event)=> {
+                event.preventDefault();
+                const newExpense={
+                    title:title,
+                    date:date,
+                    price:price,
+
+
+                };
+                console.log(newExpense);
+                
+            };
 
         return(   
-    <form>
+    <form onSubmit={onSubmit}>
         <div className="row">
             <div className='col-5 '>
                 <NewExpenseInput type='text'
@@ -39,7 +50,7 @@ const NewExpenseForm =()=>{
            =
             </div>
             <div className='col-2'>
-                <button type='button'className='btn  btn-dark' onClick={onSubmit}>Submit</button>
+                <button type='submit'className='btn  btn-dark' >Submit</button>
             </div>
             
         </div>
