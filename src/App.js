@@ -1,8 +1,11 @@
 import React from 'react';
 import './App.css';
-import ExpenseItem from './components/expense/ExpenseItem';
+
 import ExpenseItemTitle from './components/expense/ExpenseTitle';
 import AppTitle from './components/AppTitle';
+import Footer from './components/layout/footer';
+import NewExpense from './components/newExpense/newExpense';
+import Expenses from './components/expense/Expenses';
 
 const App=() =>{
   const expenses=[
@@ -28,13 +31,14 @@ const App=() =>{
 return (
     <div className="App container">
       <AppTitle />
-      <br />
-      <ExpenseItem  title={expenses[0].title} price ={expenses[0].price} date={expenses[0].date} status={expenses[0].status} />
-      <ExpenseItem title={expenses[1].title} price ={expenses[1].price} date={expenses[1].date} status={expenses[1].status}/>
-      <ExpenseItem title={expenses[2].title} price ={expenses[2].price} date={expenses[2].date} status={expenses[2].status} />
+      
+      <NewExpense />
+      
+     <Expenses expenses={expenses}/>
+    <Footer date={new Date().getFullYear()} />
     </div> 
   );
-}
+};
 
 
 export default App;
