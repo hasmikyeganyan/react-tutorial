@@ -4,7 +4,7 @@ const ExpenseTitle=(props)=>(
               <div className='row'>
             <div className='col-4 text-secondary'>
             <i className='far fa-clock px-2' ></i>{' '}
-            {props.date.toDateString()}
+            {props.date}
             </div>
             <div className='col-8'>
             <b>{props.title} </b>

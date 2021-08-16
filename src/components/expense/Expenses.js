@@ -1,27 +1,25 @@
+import EmptyExpenses from './EmptyExpenses';
 import ExpenseItem from './ExpenseItem';
-const Expenses =(props)=>{
-    return(
+const Expenses =(props)=>(
+  
         <div>
-             <ExpenseItem 
-              title={props.expenses[0].title}
-               price ={props.expenses[0].price} 
-               date={props.expenses[0].date} 
-               status={props.expenses[0].status} 
-               />
-      <ExpenseItem
-       title={props.expenses[1].title}
-        price ={props.expenses[1].price}
-         date={props.expenses[1].date}
-          status={props.expenses[1].status}
-          />
-      <ExpenseItem 
-      title={props.expenses[2].title}
-       price ={props.expenses[2].price}
-        date={props.expenses[2].date}
-         status={props.expenses[2].status} 
-         />
-        </div>
 
-    )
-};
+            {props.expenses.length > 0 ?(
+                props.expenses.map((expense)=> (
+                  <ExpenseItem 
+                  key={expense.title}
+                  title={expense.title}
+                   price ={expense.price} 
+                   date={expense.date} 
+                   status={expense.status} 
+                   />
+            ))
+            ): (
+             <EmptyExpenses />
+            ) }
+             
+</div>
+    );
+            
+
 export default Expenses;
